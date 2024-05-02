@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  api:
+    build:
+      context: ./lt-api
+      dockerfile: Dockerfile
+    ports:
+      - "3000": "3000"
+  web:
+    build:
+      context: ./lt-web
+      dockerfile: Dockerfile
+    ports:
+      - "3001": "3001"
